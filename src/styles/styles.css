@@ -1,0 +1,133 @@
+/* задаём кастомные параметры */
+:root {
+	--primary: #6c38cc;
+	--anti-accent: #7c7c8a;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+
+	background: #121214;
+	color: white;
+
+	/* убираем лесенку со шрифтов */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	padding: 30px 200px;
+
+	background: #202024;
+	border-radius: 8px;
+}
+
+.logo,
+.logo-img {
+	width: 50px;
+	height: 50px;
+}
+
+.timer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+}
+
+.timer-info {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 160%;
+}
+
+.timer-input {
+	width: 40px;
+	text-align: center;
+
+	padding: 5px 10px;
+
+	background: none;
+	border: none;
+	border-bottom: 2px solid var(--anti-accent);
+
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--anti-accent);
+}
+
+.timer-countdown {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.num {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 160px;
+	line-height: 1;
+
+	padding: 40px 16px;
+
+	border-radius: 8px;
+
+	background: #29292e;
+}
+
+.dots {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 160px;
+
+	color: var(--primary);
+}
+
+.timer-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	padding: 20px;
+
+	width: 100%;
+
+	border: none;
+	border-radius: 8px;
+
+	font-size: 16px;
+	font-weight: 700;
+
+	color: white;
+	background: var(--primary);
+
+	cursor: pointer;
+}
+
+/* скрываем переключатели внутри инпута */
+.timer-input::-webkit-outer-spin-button,
+.timer-input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* скрываем переключатели для мозиллы */
+.timer-input[type='number'] {
+	-moz-appearance: textfield;
+}
